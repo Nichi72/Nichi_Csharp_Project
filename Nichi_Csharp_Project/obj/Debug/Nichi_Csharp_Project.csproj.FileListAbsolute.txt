@@ -4,3 +4,9 @@ C:\Users\Admin\Documents\20162339\Nichi_Csharp_Project\Nichi_Csharp_Project\bin\
 C:\Users\Admin\Documents\20162339\Nichi_Csharp_Project\Nichi_Csharp_Project\obj\Debug\Nichi_Csharp_Project.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Documents\20162339\Nichi_Csharp_Project\Nichi_Csharp_Project\obj\Debug\Nichi_Csharp_Project.exe
 C:\Users\Admin\Documents\20162339\Nichi_Csharp_Project\Nichi_Csharp_Project\obj\Debug\Nichi_Csharp_Project.pdb
+C:\Users\Admin\Documents\GitHub\Nichi_Csharp_Project\Nichi_Csharp_Project\bin\Debug\Nichi_Csharp_Project.exe.config
+C:\Users\Admin\Documents\GitHub\Nichi_Csharp_Project\Nichi_Csharp_Project\obj\Debug\Nichi_Csharp_Project.exe
+C:\Users\Admin\Documents\GitHub\Nichi_Csharp_Project\Nichi_Csharp_Project\obj\Debug\Nichi_Csharp_Project.pdb
+C:\Users\Admin\Documents\GitHub\Nichi_Csharp_Project\Nichi_Csharp_Project\bin\Debug\Nichi_Csharp_Project.exe
+C:\Users\Admin\Documents\GitHub\Nichi_Csharp_Project\Nichi_Csharp_Project\bin\Debug\Nichi_Csharp_Project.pdb
+C:\Users\Admin\Documents\GitHub\Nichi_Csharp_Project\Nichi_Csharp_Project\obj\Debug\Nichi_Csharp_Project.csprojResolveAssemblyReference.cache
