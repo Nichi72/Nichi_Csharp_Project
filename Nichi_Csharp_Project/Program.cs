@@ -11,14 +11,19 @@ namespace Nichi_Csharp_Project
     {
         static void Main(string[] args)
         {
-            while(true)
-            {
-                string str = Console.ReadLine();
-                Fix fix = new Fix();
-                fix.postFix(str);
-                Console.WriteLine();
-            }
-        
+            string str = "5*5+5*5";
+            Fix fix = new Fix();
+            fix.postFix(str);
+
+            //while (true)
+            //{
+
+            //    string str = Console.ReadLine();
+            //    Fix fix = new Fix();
+            //    fix.postFix(str);
+            //    Console.WriteLine();
+            //}
+
         }
     }
 
@@ -70,6 +75,7 @@ namespace Nichi_Csharp_Project
             char[] arr_char = new char[str.Length];
             string outStr = null;
             Operator operatorTemp =new Operator();
+           
             for (int i = 0; i < str.Length; i++)
             {
                 arr_char[i] = str[i];
@@ -92,9 +98,11 @@ namespace Nichi_Csharp_Project
                         operatorTemp = arr_operatorRank[3];
                         break;
                     default:
+                        Console.Write("@ " + arr_char[i]);
                         stack_operand.Push(arr_char[i]);
                         break;
                 }
+
                 // 연산자 스택 Top과 연산자 Temp랑 비교
                 // 연산자랭크가 높을수록 우선순위
                 //('+', 5);
@@ -104,8 +112,20 @@ namespace Nichi_Csharp_Project
 
                 // 문제점
                 // 맨 처음에는 피연산자 하나 연산자 NUll이라 비교를 못함.
+                // sol) 예외처리를 해주자!
+                // 만약  stack_operator.Peek()가 NULL이면 그냥 push해주자!
+
+                //else if(stack_operand.Count <= 0)
+                //{
+                //    stack_operand.Push(operatorTemp);
+                //    continue;
+                //}
 
                 // * > + 라면 
+                if (stack_operator.Count <= 0)
+                {
+                    stack_operator.Push(operatorTemp);
+                }
                 if (operatorTemp.operatorRank > stack_operator.Peek().operatorRank)
                 {
                     stack_operator.Push(operatorTemp);
@@ -113,20 +133,26 @@ namespace Nichi_Csharp_Project
                 // + < * 라면
                 else if(operatorTemp.operatorRank < stack_operator.Peek().operatorRank)
                 {
-                    int temp = (int)stack_operand.Pop() + (int)stack_operand.Pop();
-                    outStr = temp.ToString();
-
+                    
+                    outStr += stack_operand.Pop().ToString() + stack_operand.Pop();
+                    outStr += stack_operator.Pop().char_Operator;
+                }
+                // * == * 라면 
+                // 튀어나와야지!
+                else if (operatorTemp.operatorRank == stack_operator.Peek().operatorRank)
+                {
+                    Console.WriteLine();
+                    outStr += stack_operand.Pop().ToString() + stack_operand.Pop();
+           
                     outStr += stack_operator.Pop().char_Operator;
                 }
            
                  
             }
+            Console.WriteLine("End : " + outStr);
 
 
-            foreach(char a in arr_char)
-            {
-                Console.Write(a);
-            }
+
         }
         // 전위 표기법 
         public void preFix()
